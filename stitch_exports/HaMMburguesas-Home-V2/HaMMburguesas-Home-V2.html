@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#dcd9d9",
+              "on-background": "#1c1b1b",
+              "outline": "#807660",
+              "on-primary-fixed": "#241a00",
+              "on-primary-container": "#685100",
+              "surface-container-low": "#f6f3f2",
+              "surface-bright": "#fcf9f8",
+              "primary-fixed-dim": "#f3c000",
+              "on-primary": "#ffffff",
+              "surface-variant": "#e5e2e1",
+              "primary-fixed": "#ffe08f",
+              "on-surface": "#1c1b1b",
+              "secondary": "#5f5e5e",
+              "secondary-fixed-dim": "#c8c6c5",
+              "secondary-fixed": "#e5e2e1",
+              "tertiary-fixed": "#b3ebff",
+              "on-secondary-fixed-variant": "#474646",
+              "primary": "#755b00",
+              "background": "#fcf9f8",
+              "inverse-on-surface": "#f3f0ef",
+              "primary-container": "#f5c200",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#4e4632",
+              "tertiary-container": "#49d9ff",
+              "on-tertiary-fixed": "#001f27",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "tertiary": "#00677d",
+              "on-tertiary-container": "#005c70",
+              "surface": "#fcf9f8",
+              "inverse-primary": "#f3c000",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#e5e2e1",
+              "on-secondary-container": "#656464",
+              "inverse-surface": "#313030",
+              "on-primary-fixed-variant": "#584400",
+              "on-tertiary-fixed-variant": "#004e5f",
+              "tertiary-fixed-dim": "#45d7fc",
+              "surface-container-high": "#ebe7e7",
+              "surface-container": "#f0edec",
+              "error": "#ba1a1a",
+              "surface-container-highest": "#e5e2e1",
+              "error-container": "#ffdad6",
+              "surface-tint": "#755b00",
+              "on-secondary-fixed": "#1c1b1b",
+              "outline-variant": "#d2c5ab"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .diagonal-bg {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        .diagonal-bg-rev {
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        }
+        .skew-box {
+            transform: skewX(-12deg);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-black/80 backdrop-blur-md fixed top-0 z-50 w-full">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-yellow-500 dark:text-yellow-400 active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-2xl font-black italic tracking-tighter text-black dark:text-yellow-500 uppercase transform -skew-x-12 Epilogue">HaMMburguesas</h1>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-yellow-600 dark:text-yellow-400 font-black text-sm uppercase Manrope hover:skew-x-6 transition-transform duration-200" href="#">INICIO</a>
+<a class="text-black dark:text-white font-medium text-sm uppercase Manrope hover:skew-x-6 transition-transform duration-200 hover:text-yellow-600" href="#">MENÚ</a>
+<a class="text-black dark:text-white font-medium text-sm uppercase Manrope hover:skew-x-6 transition-transform duration-200 hover:text-yellow-600" href="#">DROPS</a>
+</div>
+<button class="text-yellow-500 dark:text-yellow-400 active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+<div class="bg-gradient-to-r from-yellow-500/20 to-transparent h-1 w-full absolute bottom-0"></div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[795px] flex items-center justify-center overflow-hidden bg-black">
+<div class="absolute inset-0 opacity-70">
+<img class="w-full h-full object-cover" data-alt="Close up of a premium spectacular burger with melting cheese and fresh ingredients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt8zBUnxkAsKBYq3Z3i3hpjvnkJTJWRhUlTdTo5PZBkwQqjj5Cp-WCOhWg0fQOmdMqEpKRhxC9iqlTbvFe2vK-UAOc5c4KfIKXKJjrTeDk97dcxBQ-1h3S32Yw1c27bMhw_7a9WYbY33iXwnLcY7rcrDTjugYCCa13gLX89kvvYV5DHU1VzekxN_ogZPgQlL3OB69Bq92hzD5L0bkoyhYvzK9itLCnXQh4UBIhD80f8FpoI_lChTMay8K13TdsaZMCki1yhf5fDd6r"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+<div class="relative z-10 text-center px-4 max-w-5xl">
+<h2 class="text-7xl md:text-[10rem] font-black italic tracking-tighter text-white uppercase leading-[0.85] Epilogue transform -skew-x-6 mb-8">
+                HaMM<br/><span class="text-primary-container">burguesas</span>
+</h2>
+<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+<button class="bg-primary-container text-on-primary-container px-12 py-5 rounded-full font-black text-xl uppercase tracking-widest hover:scale-105 transition-transform active:scale-95">
+                    VER MENÚ
+                </button>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 p-8 hidden lg:block">
+<p class="text-white/40 font-black italic text-8xl Epilogue transform -skew-x-12 select-none">STREET FOOD ONLY</p>
+</div>
+</section>
+<!-- Banner de Horarios -->
+<div class="bg-primary-container text-on-primary-container py-4 overflow-hidden whitespace-nowrap border-y-4 border-black">
+<div class="flex items-center gap-12 animate-marquee">
+<p class="font-black italic text-2xl Epilogue uppercase tracking-tight">LUN–DOM 1PM–10PM · VIE–SÁB 1PM–11PM · LUN–DOM 1PM–10PM · VIE–SÁB 1PM–11PM · LUN–DOM 1PM–10PM · VIE–SÁB 1PM–11PM</p>
+</div>
+</div>
+<!-- Top Sellers Section -->
+<section class="py-24 bg-surface px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h3 class="text-primary font-black tracking-widest text-sm uppercase mb-2">HOT DROPS</h3>
+<h2 class="text-5xl md:text-7xl font-black italic Epilogue text-on-background transform -skew-x-6 leading-none">MÁS VENDIDOS</h2>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-6xl text-primary-container/30" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-low rounded-lg p-8 pt-24 overflow-visible hover:bg-white transition-colors duration-300">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-48 group-hover:scale-110 transition-transform duration-500">
+<img class="w-full h-full object-contain drop-shadow-2xl" data-alt="Onion Blazer burger with crispy onions and sauce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-_DLgsDDI9mRZjbt0UE6NDwozRudHvbMvr39w0vshT_3-5pHbp5rnY8jd78dkp2FrR3qwwvhe1CdpQ3oS5d-6bFy4fEJEDJefISR6I17UJ8urDHDEGWUNivPFzoe8Z-3ItjWnBZIs94Obpa2W6KFqPIo9H6lCdmHNDaU-pKH3f7oRVtQ2ZuvhI57mwxua76OziRRsxuSGbhNJZLv1icltgb_sHt31x9XLJlT0z__pC-zeJQeqwX2w9cZ-SKDMSp1d1lOc8sT9c04m"/>
+</div>
+<div class="mt-12 text-center">
+<h4 class="text-3xl font-black italic Epilogue uppercase mb-2">Onion Blazer</h4>
+<p class="text-primary font-black text-2xl mb-4">₡6,950</p>
+<button class="w-full bg-black text-white py-4 rounded-full font-bold uppercase tracking-widest hover:bg-primary-container hover:text-black transition-colors">AÑADIR AL DROP</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-primary-container rounded-lg p-8 pt-24 overflow-visible">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-48 group-hover:scale-110 transition-transform duration-500">
+<img class="w-full h-full object-contain drop-shadow-2xl" data-alt="Stan Smith Avocado burger with fresh avocado slices" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM1e9hUP33h9B7mQAwP4zB904IDX-Z_0tnQs3zxdPNixsU92XahL5YSO78mKpwc1ddTJVBcj8DJpqSN2M1QHG-sN3oAnRDxNxhcDrfu6ybJpdrVIHB6Yv89YKnoG0kGJG0VqyOPpj1_yM8ceRIqD1uxcwhGEbEBxtLhhHT6n7uYmG4KRYGhqiENjQxiczlL8KDdxdpo_aff1Oor4SiZqV9ZOPxZtI8Cw4kSlAl5abzhRWoV4T1gjfYjYSfw1QLuBC3f-qoz3pT39qT"/>
+</div>
+<div class="mt-12 text-center">
+<div class="inline-block bg-black text-white px-3 py-1 rounded-full text-xs font-black mb-2 uppercase tracking-tighter">Bestseller</div>
+<h4 class="text-3xl font-black italic Epilogue uppercase mb-2">Stan Smith Avocado</h4>
+<p class="text-black font-black text-2xl mb-4">₡6,500</p>
+<button class="w-full bg-white text-black py-4 rounded-full font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors">AÑADIR AL DROP</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-low rounded-lg p-8 pt-24 overflow-visible hover:bg-white transition-colors duration-300">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-48 group-hover:scale-110 transition-transform duration-500">
+<img class="w-full h-full object-contain drop-shadow-2xl" data-alt="Large portion of loaded supreme fries with toppings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhqZ64svgqXmnrtW8WTJ6rbcoHgTjqU1hWXFiFemmx37eds5xnQf57unmqo9oXPKJLxvCKD8O9HJAwXBuiF70JtoAROTlAHbdxaCpYSF00526pkIje59N_MVJ7duyLvV7KccIWdRoY-x3dF-1eoTKeK-vobcuf2CaAqbAIi7BE9CAeUVPv3YSbS5nmkdI61yhfTwC6rIuQh8-WsR3XF3alo_Gamy_zW0P55tPD-OtBr_L8G6gdDtQGkFbDsXp_cUbvWUhQ-pR_cJ1t"/>
+</div>
+<div class="mt-12 text-center">
+<h4 class="text-3xl font-black italic Epilogue uppercase mb-2">Papas Supremas</h4>
+<p class="text-primary font-black text-2xl mb-4">₡4,300</p>
+<button class="w-full bg-black text-white py-4 rounded-full font-bold uppercase tracking-widest hover:bg-primary-container hover:text-black transition-colors">AÑADIR AL DROP</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Menú Completo Section -->
+<section class="py-24 bg-black text-white diagonal-bg-rev pb-40">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-5xl md:text-8xl font-black italic Epilogue uppercase transform -skew-x-6 mb-12 text-primary-container">EL MENÚ</h2>
+<!-- Styled Tabs -->
+<div class="flex flex-wrap gap-4 mb-16">
+<button class="bg-primary-container text-black px-8 py-3 rounded-full font-black uppercase text-sm tracking-widest Epilogue">Hamburguesas</button>
+<button class="bg-surface-container-highest/20 text-white px-8 py-3 rounded-full font-black uppercase text-sm tracking-widest Epilogue hover:bg-white/10 transition-colors">Chanclas</button>
+<button class="bg-surface-container-highest/20 text-white px-8 py-3 rounded-full font-black uppercase text-sm tracking-widest Epilogue hover:bg-white/10 transition-colors">Papas</button>
+<button class="bg-surface-container-highest/20 text-white px-8 py-3 rounded-full font-black uppercase text-sm tracking-widest Epilogue hover:bg-white/10 transition-colors">Cachos &amp; Alitas</button>
+<button class="bg-surface-container-highest/20 text-white px-8 py-3 rounded-full font-black uppercase text-sm tracking-widest Epilogue hover:bg-white/10 transition-colors">Kids</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12">
+<!-- Menu Item -->
+<div class="flex justify-between items-start gap-6 group">
+<div class="flex-1">
+<h5 class="text-2xl font-black italic uppercase Epilogue mb-1 flex items-center gap-3">
+                            OG HaMM
+                            <span class="h-px bg-white/20 flex-grow"></span>
+</h5>
+<p class="text-white/60 text-sm font-medium leading-relaxed max-w-sm">Doble torta artesanal, queso cheddar, cebolla caramelizada, pepinillos y salsa secreta.</p>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black italic Epilogue text-primary-container">₡5,900</p>
+<button class="text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity text-primary-container mt-2">+ AGREGAR</button>
+</div>
+</div>
+<!-- Menu Item -->
+<div class="flex justify-between items-start gap-6 group">
+<div class="flex-1">
+<h5 class="text-2xl font-black italic uppercase Epilogue mb-1 flex items-center gap-3">
+                            Bacon Air Jordan
+                            <span class="h-px bg-white/20 flex-grow"></span>
+</h5>
+<p class="text-white/60 text-sm font-medium leading-relaxed max-w-sm">Tocino ahumado extra crocante, aros de cebolla y BBQ chipotle.</p>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black italic Epilogue text-primary-container">₡7,200</p>
+<button class="text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity text-primary-container mt-2">+ AGREGAR</button>
+</div>
+</div>
+<!-- Menu Item -->
+<div class="flex justify-between items-start gap-6 group">
+<div class="flex-1">
+<h5 class="text-2xl font-black italic uppercase Epilogue mb-1 flex items-center gap-3">
+                            Truffle Hype
+                            <span class="h-px bg-white/20 flex-grow"></span>
+</h5>
+<p class="text-white/60 text-sm font-medium leading-relaxed max-w-sm">Hongos salteados, queso suizo y alioli de trufa negra.</p>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black italic Epilogue text-primary-container">₡7,800</p>
+<button class="text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity text-primary-container mt-2">+ AGREGAR</button>
+</div>
+</div>
+<!-- Menu Item -->
+<div class="flex justify-between items-start gap-6 group">
+<div class="flex-1">
+<h5 class="text-2xl font-black italic uppercase Epilogue mb-1 flex items-center gap-3">
+                            La Chancla Classic
+                            <span class="h-px bg-white/20 flex-grow"></span>
+</h5>
+<p class="text-white/60 text-sm font-medium leading-relaxed max-w-sm">Tender de pollo frito estilo Nashville, ensalada coleslaw y pan brioche.</p>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black italic Epilogue text-primary-container">₡6,100</p>
+<button class="text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity text-primary-container mt-2">+ AGREGAR</button>
+</div>
+</div>
+</div>
+<div class="mt-20 flex justify-center">
+<button class="group flex items-center gap-4 bg-white text-black px-10 py-5 rounded-full font-black uppercase tracking-tighter hover:bg-primary-container transition-colors">
+                    DESCARGAR PDF COMPLETO
+                    <span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</section>
+<!-- CTA Final Section -->
+<section class="relative bg-white py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-20">
+<div>
+<h2 class="text-6xl md:text-8xl font-black italic Epilogue uppercase transform -skew-x-6 leading-[0.9] mb-8">
+                    ÚNETE <br/> AL <span class="bg-black text-white px-4">DROP</span>
+</h2>
+<p class="text-xl font-bold mb-12 max-w-md">No te pierdas nuestras ediciones limitadas y eventos exclusivos en la calle.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-black px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center justify-center gap-3 shadow-xl">
+                        PEDIR AHORA
+                        <span class="material-symbols-outlined">rocket_launch</span>
+</button>
+<button class="border-4 border-black text-black px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-black hover:text-white transition-all">
+                        SEGUIR EN IG
+                        <span class="material-symbols-outlined">photo_camera</span>
+</button>
+</div>
+<p class="mt-12 text-3xl font-black italic Epilogue text-black/20">@hammbburguesas</p>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-full bg-primary-container/20 absolute inset-0 animate-pulse"></div>
+<img class="relative z-10 w-full h-full object-cover rounded-lg rotate-3 shadow-2xl" data-alt="Hypebeast lifestyle photography with a burger and urban background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQD5Ea6WM5fLldy2Y1vYuEozUeCVr6-sL6oHJVa5ioxHLE_4KK9C5iWKwWDAp39STarpLOlnopODeRkwdot5G14cIQ5QBMZBlcPHKZQ5DWfBHlGJ208-O24TF1t41Xa0SM4fB_5lDoIOzIXA_a5tVsoOP5i1H2XT-HG1WCS7wzwFsppu00Uo7-mzUrBOlrigasxr4jK8Bhxu8fcThzUBFvPitCYQXX2UgnlXn7SNA4I37QsPl7mvW729XxcfUgL8Uifvl6L3_2cTeB"/>
+<div class="absolute -bottom-6 -right-6 bg-black text-white p-8 rounded-lg -rotate-6 z-20">
+<p class="text-4xl font-black italic Epilogue">CRRRRISPY.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Space for Mobile Nav -->
+<div class="h-24 md:hidden"></div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end px-4 pb-6 pt-2 h-24 bg-black dark:bg-[#111111] z-50 rounded-t-[2.5rem] shadow-[0_-8px_30px_rgb(0,0,0,0.12)] md:hidden">
+<a class="flex flex-col items-center justify-center bg-yellow-500 text-black rounded-full w-16 h-16 -translate-y-4 border-4 border-white dark:border-black scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-black tracking-widest Epilogue uppercase">INICIO</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/60 p-2 hover:text-yellow-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="text-[10px] font-black tracking-widest Epilogue uppercase">MENÚ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/60 p-2 hover:text-yellow-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="local_fire_department">local_fire_department</span>
+<span class="text-[10px] font-black tracking-widest Epilogue uppercase">DROPS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/60 p-2 hover:text-yellow-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="text-[10px] font-black tracking-widest Epilogue uppercase">CARRITO</span>
+</a>
+</nav>
+<!-- FAB Suppression Rule followed: Not rendering on general marketing/landing style if not strictly necessary, but included here as a 'Order Now' floating action for conversions if it was required by user context -->
+<button class="fixed bottom-32 right-6 md:bottom-8 md:right-8 bg-primary-container text-black p-5 rounded-full shadow-2xl z-40 hover:scale-110 transition-transform active:scale-95 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</button>
+</body></html>
