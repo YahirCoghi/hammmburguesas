@@ -1,5 +1,9 @@
 const rawWhatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
-const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const derivedVercelUrl =
+  process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
+const rawSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (derivedVercelUrl ? `https://${derivedVercelUrl}` : "http://localhost:3000");
 
 export const siteConfig = {
   brand: "HaMMburguesas",

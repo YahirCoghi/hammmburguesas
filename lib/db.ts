@@ -6,6 +6,7 @@ import { createClient, type Client } from "@libsql/client";
 import { seedCategories, seedProducts } from "@/lib/catalog-seed";
 
 const LOCAL_DATABASE_URL = "file:./data/hammmburguesas.db";
+const VERCEL_FALLBACK_DATABASE_URL = "file:/tmp/hammmburguesas.db";
 
 declare global {
   var __hammDbPromise: Promise<Client> | undefined;
@@ -17,9 +18,7 @@ function resolveDatabaseUrl() {
   }
 
   if (process.env.VERCEL === "1") {
-    throw new Error(
-      "DATABASE_URL no esta configurada. Define una base libSQL/Turso para desplegar en Vercel.",
-    );
+    return VERCEL_FALLBACK_DATABASE_URL;
   }
 
   return LOCAL_DATABASE_URL;

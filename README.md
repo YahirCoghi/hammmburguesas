@@ -34,6 +34,7 @@ Configura estas variables de entorno en Vercel:
 - `ADMIN_PASSWORD`
 
 La app esta preparada para usar una base libSQL remota en produccion. Si usas Turso, coloca su URL y token en `DATABASE_URL` y `DATABASE_AUTH_TOKEN`.
+Si `DATABASE_URL` no existe en Vercel, la app levanta una base temporal en `/tmp` para no romper el sitio, pero ese inventario no es persistente.
 
 ## Panel de inventario
 
